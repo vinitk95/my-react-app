@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vinitk95/my-react-app/static/css/main.f855e6bc.css",
-    "main.js": "/vinitk95/my-react-app/static/js/main.44ce5f3f.js",
-    "static/js/453.ad6eb26e.chunk.js": "/vinitk95/my-react-app/static/js/453.ad6eb26e.chunk.js",
-    "index.html": "/vinitk95/my-react-app/index.html",
-    "main.f855e6bc.css.map": "/vinitk95/my-react-app/static/css/main.f855e6bc.css.map",
-    "main.44ce5f3f.js.map": "/vinitk95/my-react-app/static/js/main.44ce5f3f.js.map",
-    "453.ad6eb26e.chunk.js.map": "/vinitk95/my-react-app/static/js/453.ad6eb26e.chunk.js.map"
+    "main.css": "/my-react-app/static/css/main.f855e6bc.css",
+    "main.js": "/my-react-app/static/js/main.f4a3cd77.js",
+    "static/js/453.ad6eb26e.chunk.js": "/my-react-app/static/js/453.ad6eb26e.chunk.js",
+    "index.html": "/my-react-app/index.html",
+    "main.f855e6bc.css.map": "/my-react-app/static/css/main.f855e6bc.css.map",
+    "main.f4a3cd77.js.map": "/my-react-app/static/js/main.f4a3cd77.js.map",
+    "453.ad6eb26e.chunk.js.map": "/my-react-app/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.44ce5f3f.js"
+    "static/js/main.f4a3cd77.js"
   ]
 }
