@@ -2,7 +2,8 @@
 
 .envelope {
     position: relative;
-    width: 600px;
+    width: 90%; /* Use a percentage for responsiveness */
+    max-width: 600px; /* Maintain a maximum width for larger screens */
     height: 400px;
     margin: 50px auto;
     cursor: pointer;
@@ -65,13 +66,43 @@
 
 .letter.fullSize {
     top: 0%;
-    height: 100%;  /* Expand to full screen */
+    height: 100%; /* Expand to full screen */
     opacity: 1;
     z-index: -2;
-    transform: scale(1);  /* Scale up if necessary */
+    transform: scale(1); /* Scale up if necessary */
 }
 
-/**/
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .envelope {
+        height: 90vh; /* Make it taller on mobile */
+    }
+
+    .letter {
+        font-size: 16px; /* Reduce font size for smaller screens */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .letter-content {
+        font-size: 14px; /* Further reduce font size for content */
+    }
+
+    .heart {
+        width: 15px; /* Smaller hearts */
+        height: 15px; /* Smaller hearts */
+    }
+}
+
+/* Fallback styles for smaller screens */
+@media (max-width: 480px) {
+    .envelope {
+        height: 80vh; /* Adjust the height for very small screens */
+    }
+
+    .letter-content {
+        font-size: 12px; /* Further reduce font size */
+    }
+}
 
 .envelope {
     cursor: pointer;
@@ -95,157 +126,75 @@
     line-height: 1.5;
 }
 
-.envelope.open .letter {
-    /* Optional, for smooth appearance */
+@keyframes float-hearts {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+    }
 }
 
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: float-hearts 10s infinite ease-in-out;
+}
 
-/*@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&family=Dancing+Script:wght@600&display=swap');*/
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
 
-/*body {*/
-/*    background-color: #f0f4f8;*/
-/*    font-family: 'Dancing Script', cursive;*/
-/*}*/
+.heart:before {
+    top: -10px;
+    left: 0;
+}
 
-/*.envelope {*/
-/*    position: relative;*/
-/*    width: 600px;*/
-/*    height: 400px;*/
-/*    margin: 50px auto;*/
-/*    perspective: 1500px;*/
-/*    cursor: pointer;*/
-/*    transition: transform 0.6s ease;*/
-/*}*/
+.heart:after {
+    left: 10px;
+    top: 0;
+}
 
-/*.envelope:hover {*/
-/*    transform: scale(1.05) rotateY(10deg);*/
-/*}*/
+/* Multiple hearts floating */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
 
-/*.flap {*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*    background: linear-gradient(45deg, #ff9a9e, #fecfef);*/
-/*    transform-origin: bottom;*/
-/*    transition: transform 0.8s ease, background 0.8s ease;*/
-/*    border-top-left-radius: 8px;*/
-/*    border-top-right-radius: 8px;*/
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);*/
-/*}*/
+.hearts-container .heart {
+    animation-duration: 7s;
+}
 
-/*.flap:hover {*/
-/*    background: linear-gradient(45deg, #ff9a9e, #ffdde1);*/
-/*}*/
+.heart:nth-child(2) {
+    animation-duration: 9s;
+    left: 20%;
+}
 
-/*.body {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*    background: linear-gradient(45deg, #ffdde1, #fee2f8);*/
-/*    border-bottom-left-radius: 8px;*/
-/*    border-bottom-right-radius: 8px;*/
-/*    z-index: -1;*/
-/*    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);*/
-/*}*/
+.heart:nth-child(3) {
+    animation-duration: 12s;
+    left: 40%;
+}
 
-/*.letter {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*    background-color: #fff;*/
-/*    opacity: 0;*/
-/*    font-family: "Sedan", serif;*/
-/*    font-weight: 400;*/
-/*    font-size: 22px;*/
-/*    font-style: italic;*/
-/*    color: #333;*/
-/*    padding: 20px;*/
-/*    box-sizing: border-box;*/
-/*    text-align: justify;*/
-/*    transform-origin: bottom;*/
-/*    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);*/
-/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
-/*}*/
+.heart:nth-child(4) {
+    animation-duration: 8s;
+    left: 60%;
+}
 
-/*.letter p {*/
-/*    line-height: 1.6;*/
-/*    text-align: left;*/
-/*    font-size: 1.2rem;*/
-/*    font-family: 'Dancing Script', cursive;*/
-/*    color: #ff6f61;*/
-/*}*/
-
-/*.open .flap {*/
-/*    transform: rotateX(-180deg);*/
-/*    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);*/
-/*}*/
-
-/*.open .letter {*/
-/*    opacity: 1;*/
-/*    z-index: 0;*/
-/*}*/
-
-/*.letter.fullSize {*/
-/*    top: 0%;*/
-/*    height: 100%;*/
-/*    opacity: 1;*/
-/*    transform: scale(1);*/
-/*}*/
-
-/*!* Heart animation *!*/
-/*.heart {*/
-/*    position: absolute;*/
-/*    top: 40%;*/
-/*    left: 50%;*/
-/*    width: 60px;*/
-/*    height: 60px;*/
-/*    margin-left: -30px;*/
-/*    opacity: 0;*/
-/*    transform: scale(0.2);*/
-/*    transition: all 0.8s ease-in-out;*/
-/*}*/
-
-/*.heart svg {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
-/*.open .heart {*/
-/*    opacity: 1;*/
-/*    transform: scale(1.2);*/
-/*}*/
-
-/*.heart svg {*/
-/*    fill: #ff6f61;*/
-/*    transition: fill 0.3s ease;*/
-/*}*/
-
-/*.heart:hover svg {*/
-/*    fill: #ff3b2e;*/
-/*}*/
-
-/*.container {*/
-/*    text-align: center;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*button {*/
-/*    font-family: 'Dancing Script', cursive;*/
-/*    background-color: #ff6f61;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    padding: 10px 20px;*/
-/*    font-size: 1.2rem;*/
-/*    border-radius: 20px;*/
-/*    cursor: pointer;*/
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-/*    transition: background-color 0.3s ease, transform 0.3s ease;*/
-/*}*/
-
-/*button:hover {*/
-/*    background-color: #ff3b2e;*/
-/*    transform: scale(1.05);*/
-/*}*/
+.heart:nth-child(5) {
+    animation-duration: 11s;
+    left: 80%;
+}
