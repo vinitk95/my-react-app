@@ -252,3 +252,42 @@
 .letter:hover::before {
     background: rgba(255, 255, 255, 0.2); /* Stronger overlay on hover */
 }
+
+body {
+    background-color: #ffcccb; /* Keep the body background white */
+}
+
+.main-content {
+    background-color: #f72828; /* Light gray background */
+    padding: 40px; /* Padding for content */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 800px; /* Limit width */
+    margin: 20px auto; /* Centering */
+    position: relative; /* For ::before positioning */
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Decorative element height */
+    background: rgba(255, 182, 193, 0.3); /* Light pink */
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    z-index: -1; /* Behind content */
+}
+
+.main-content h1 {
+    color: #ff4d4d; /* Header color */
+    font-size: 2em; /* Header size */
+    margin-bottom: 20px; /* Space below header */
+}
+
+.main-content p {
+    color: #333; /* Text color */
+    line-height: 1.6; /* Line height */
+    font-size: 16px; /* Font size */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
