@@ -198,3 +198,57 @@
     animation-duration: 11s;
     left: 80%;
 }
+
+.letter {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, #ffb347, #ffcc33); /* Lighter gradient background */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+    transition: all 0.5s ease; /* Smooth transition */
+    transform-origin: bottom;
+    z-index: -2;
+    opacity: 0.9; /* Slightly more opaque */
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding: 40px; /* Increased padding */
+    box-sizing: border-box;
+    text-align: justify;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+}
+
+.letter-content {
+    padding: 20px;
+    font-size: 18px; /* Increased font size for better readability */
+    line-height: 1.6; /* Increased line height for better spacing */
+    color: #333; /* Darker text color for better contrast against lighter background */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); /* Subtle text shadow */
+}
+
+.letter:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+    transform: scale(1.02); /* Slight scaling effect on hover */
+}
+
+/* Additional styles for decorative effect */
+.letter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle white overlay */
+    z-index: -1; /* Positioned behind the letter */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.letter:hover::before {
+    background: rgba(255, 255, 255, 0.2); /* Stronger overlay on hover */
+}
