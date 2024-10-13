@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/my-react-app/static/css/main.f855e6bc.css",
-    "main.js": "/my-react-app/static/js/main.f4a3cd77.js",
+    "main.css": "/my-react-app/static/css/main.f391fbb9.css",
+    "main.js": "/my-react-app/static/js/main.63d52f4c.js",
     "static/js/453.ad6eb26e.chunk.js": "/my-react-app/static/js/453.ad6eb26e.chunk.js",
+    "static/media/Apna-Bana-Le.mp3": "/my-react-app/static/media/Apna-Bana-Le.421801a4703992abaaba.mp3",
     "index.html": "/my-react-app/index.html",
-    "main.f855e6bc.css.map": "/my-react-app/static/css/main.f855e6bc.css.map",
-    "main.f4a3cd77.js.map": "/my-react-app/static/js/main.f4a3cd77.js.map",
+    "main.f391fbb9.css.map": "/my-react-app/static/css/main.f391fbb9.css.map",
+    "main.63d52f4c.js.map": "/my-react-app/static/js/main.63d52f4c.js.map",
     "453.ad6eb26e.chunk.js.map": "/my-react-app/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.f4a3cd77.js"
+    "static/css/main.f391fbb9.css",
+    "static/js/main.63d52f4c.js"
   ]
 }
